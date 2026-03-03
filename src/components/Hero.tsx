@@ -40,9 +40,9 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6">
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[128px] animate-glow" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[128px] animate-glow pointer-events-none" />
       <div
-        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[128px] animate-glow"
+        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[128px] animate-glow pointer-events-none"
         style={{ animationDelay: "2s" }}
       />
 
