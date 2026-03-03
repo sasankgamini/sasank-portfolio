@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "Sasank Gamini | AI/ML Engineer",
     description:
       "AI/ML Engineer, Full-Stack Builder, and UC Berkeley CS student. Building intelligent systems at the intersection of AI, infrastructure, and startups.",
-    url: "https://sasankgamini.com",
+    url: "https://sasankg.vercel.app",
     siteName: "Sasank Gamini",
     type: "website",
     locale: "en_US",
