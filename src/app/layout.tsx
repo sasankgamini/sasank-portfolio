@@ -36,12 +36,21 @@ export const metadata: Metadata = {
     siteName: "Sasank Gamini",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "https://sasankg.vercel.app/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Sasank Gamini | AI/ML Engineer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Sasank Gamini | AI/ML Engineer",
     description:
       "AI/ML Engineer, Full-Stack Builder, and UC Berkeley CS student.",
+    images: ["https://sasankg.vercel.app/opengraph-image.png"],
   },
   robots: {
     index: true,
