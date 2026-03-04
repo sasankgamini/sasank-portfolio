@@ -1,7 +1,37 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { experiences } from "@/data";
+
+function CompanyLogo({
+  logo,
+  company,
+}: {
+  logo: string;
+  company: string;
+}) {
+  const [error, setError] = useState(false);
+
+  if (error) {
+    return (
+      <div className="w-12 h-12 rounded-lg bg-blue-500/20 border border-blue-500/30 flex items-center justify-center shrink-0">
+        <span className="text-lg font-bold text-blue-400">
+          {company.charAt(0)}
+        </span>
+      </div>
+    );
+  }
+
+  return (
+    <img
+      src={logo}
+      alt={`${company} logo`}
+      className="w-12 h-12 rounded-lg object-contain bg-white p-1 shrink-0"
+      onError={() => setError(true)}
+    />
+  );
+}
 
 export default function Experience() {
   return (
@@ -36,11 +66,14 @@ export default function Experience() {
 
                 <div className="glass-card p-6 md:p-8">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-semibold text-white">
-                        {exp.company}
-                      </h3>
-                      <p className="text-blue-400">{exp.role}</p>
+                    <div className="flex items-center gap-4">
+                      <CompanyLogo logo={exp.logo} company={exp.company} />
+                      <div>
+                        <h3 className="text-xl font-semibold text-white">
+                          {exp.company}
+                        </h3>
+                        <p className="text-blue-400">{exp.role}</p>
+                      </div>
                     </div>
                     <div className="text-sm text-zinc-500 mt-1 md:mt-0 md:text-right">
                       <p>{exp.period}</p>

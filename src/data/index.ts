@@ -1,6 +1,7 @@
 export const experiences = [
   {
     company: "AppLovin",
+    logo: "/logos/applovin.png",
     role: "Software Engineer Intern",
     location: "Palo Alto, CA",
     period: "Sep 2025 – Nov 2025",
@@ -13,6 +14,7 @@ export const experiences = [
   },
   {
     company: "Meta",
+    logo: "/logos/meta.png",
     role: "Software Engineer Intern",
     location: "Bellevue, WA",
     period: "May 2025 – Aug 2025",
@@ -25,6 +27,7 @@ export const experiences = [
   },
   {
     company: "Meta",
+    logo: "/logos/meta.png",
     role: "Engineering Fellow (MLH)",
     location: "Remote",
     period: "Jun 2024 – Sep 2024",
@@ -37,6 +40,7 @@ export const experiences = [
   },
   {
     company: "Enterprise Minds",
+    logo: "/logos/enterprise-minds.png",
     role: "AI/ML Intern",
     location: "San Ramon, CA",
     period: "Jun 2023 – Sep 2023",
