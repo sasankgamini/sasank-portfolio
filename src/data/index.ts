@@ -55,6 +55,14 @@ export const experiences = [
 
 export const projects = [
   {
+    title: "AdSim",
+    description:
+      "Agent-based advertising simulation platform. Synthetic personas, Monte Carlo simulations for CTR/CPA/ROI, and reinforcement-style optimization—all local with no paid APIs.",
+    tech: ["Python", "FastAPI", "Next.js", "React", "DuckDB", "Tailwind"],
+    link: "https://github.com/sasankgamini/AdSim",
+    type: "project" as const,
+  },
+  {
     title: "Centra",
     description:
       "Intelligent Incident Routing System with decision-grade routing, evidence-backed assignment, bounded execution, outcome learning, and audit replay.",
