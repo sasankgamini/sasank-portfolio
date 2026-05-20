@@ -55,6 +55,21 @@ export const experiences = [
 
 export const projects = [
   {
+    title: "Esgent",
+    description:
+      "Multi-tenant AI agent platform that automates business workflows through industry-specific assistants with channel, scheduling, document, and API integrations.",
+    tech: [
+      "AI Agents",
+      "Workflow Automation",
+      "Multi-tenant",
+      "Integrations",
+      "Dashboard",
+      "Orchestration",
+    ],
+    link: "https://esgent.co",
+    type: "project" as const,
+  },
+  {
     title: "AdSim",
     description:
       "Agent-based advertising simulation platform. Synthetic personas, Monte Carlo simulations for CTR/CPA/ROI, and reinforcement-style optimization—all local with no paid APIs.",

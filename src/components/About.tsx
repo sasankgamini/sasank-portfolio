@@ -22,8 +22,7 @@ export default function About() {
               <p>
                 I&apos;m a Computer Science &amp; Statistics student at{" "}
                 <span className="text-white font-medium">UC Berkeley</span>{" "}
-                (GPA: 3.95) passionate about building AI systems that ship to
-                production.
+                passionate about building AI systems that ship to production.
               </p>
               <p>
                 I&apos;ve built infrastructure at{" "}
