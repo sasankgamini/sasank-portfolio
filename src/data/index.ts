@@ -108,7 +108,7 @@ export const projects = [
       "Platform for investing in content creators. Supporting the future of content creation with a thriving ecosystem where creativity is rewarded.",
     tech: ["React", "Node.js", "Financial APIs"],
     link: "https://devpost.com/software/creator-capital-yw68fs",
-    award: "Hackathon Winner",
+    award: "HackNYU Winner",
     type: "hackathon" as const,
   },
 ];
