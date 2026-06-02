@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Sasank Gamini | AI/ML Engineer",
   description:
-    "AI/ML Engineer, Full-Stack Builder, and UC Berkeley CS student. Building intelligent systems at the intersection of AI, infrastructure, and startups.",
+    "AI/ML Engineer, Full-Stack Builder, and UC Berkeley graduate. Building intelligent systems at the intersection of AI, infrastructure, and startups.",
   keywords: [
     "AI",
     "ML",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sasank Gamini | AI/ML Engineer",
     description:
-      "AI/ML Engineer, Full-Stack Builder, and UC Berkeley CS student. Building intelligent systems at the intersection of AI, infrastructure, and startups.",
+      "AI/ML Engineer, Full-Stack Builder, and UC Berkeley graduate. Building intelligent systems at the intersection of AI, infrastructure, and startups.",
     url: "https://sasankg.vercel.app",
     siteName: "Sasank Gamini",
     type: "website",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sasank Gamini | AI/ML Engineer",
     description:
-      "AI/ML Engineer, Full-Stack Builder, and UC Berkeley CS student.",
+      "AI/ML Engineer, Full-Stack Builder, and UC Berkeley graduate.",
     images: ["https://sasankg.vercel.app/opengraph-image.png"],
   },
   robots: {

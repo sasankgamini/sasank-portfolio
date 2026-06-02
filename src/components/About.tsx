@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -18,40 +19,56 @@ export default function About() {
           <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded mb-8" />
 
           <div className="glass-card p-8 md:p-10">
-            <div className="space-y-4 text-zinc-300 leading-relaxed">
-              <p>
-                I&apos;m a Computer Science &amp; Statistics student at{" "}
-                <span className="text-white font-medium">UC Berkeley</span>{" "}
-                passionate about building AI systems that ship to production.
-              </p>
-              <p>
-                I&apos;ve built infrastructure at{" "}
-                <span className="text-white font-medium">Meta</span> and{" "}
-                <span className="text-white font-medium">AppLovin</span>,
-                working on everything from stream processing reaper systems that
-                save $138K/year to AI agents that auto-generate documentation. I
-                thrive at the intersection of applied ML, platform engineering,
-                and startup building.
-              </p>
-              <p>
-                When I&apos;m not shipping code, I&apos;m hacking at hackathons
-                (multiple wins), building startups like Rentora, or
-                experimenting with LLMs and intelligent systems.
-              </p>
-              <div className="flex flex-wrap gap-3 pt-4">
-                {[
-                  "AI/ML Systems",
-                  "Applied LLMs",
-                  "Platform Engineering",
-                  "Startup Building",
-                ].map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-3 py-1 text-xs rounded-full bg-white/[0.06] border border-white/[0.08] text-zinc-400"
-                  >
-                    {tag}
-                  </span>
-                ))}
+            <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-start">
+              <div className="space-y-4 text-zinc-300 leading-relaxed">
+                <p>
+                  I&apos;m a{" "}
+                  <span className="text-white font-medium">
+                    UC Berkeley graduate
+                  </span>{" "}
+                  passionate about building AI systems that ship to production.
+                </p>
+                <p>
+                  I&apos;ve built infrastructure at{" "}
+                  <span className="text-white font-medium">Meta</span> and{" "}
+                  <span className="text-white font-medium">AppLovin</span>,
+                  working on everything from stream processing reaper systems
+                  that save $138K/year to AI agents that auto-generate
+                  documentation. I thrive at the intersection of applied ML,
+                  platform engineering, and startup building.
+                </p>
+                <p>
+                  When I&apos;m not shipping code, I&apos;m hacking at hackathons
+                  (multiple wins), building startups like Rentora, or
+                  experimenting with LLMs and intelligent systems.
+                </p>
+                <div className="flex flex-wrap gap-3 pt-4">
+                  {[
+                    "AI/ML Systems",
+                    "Applied LLMs",
+                    "Platform Engineering",
+                    "Startup Building",
+                  ].map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 text-xs rounded-full bg-white/[0.06] border border-white/[0.08] text-zinc-400"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex justify-center md:justify-end">
+                <div className="rounded-full border border-white/[0.08] bg-white/[0.04] p-3">
+                  <Image
+                    src="/logos/uc-berkeley.svg"
+                    alt="UC Berkeley"
+                    width={132}
+                    height={132}
+                    className="h-28 w-28 md:h-32 md:w-32"
+                  />
+                </div>
               </div>
             </div>
           </div>
