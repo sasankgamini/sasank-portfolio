@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function ResumeViewer() {
   return (
     <div className="min-h-screen bg-black grid-bg">
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/[0.08]">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 shadow-[0_10px_35px_rgba(0,0,0,0.35)]">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="text-xl font-bold gradient-text">
             SG

@@ -45,7 +45,7 @@ export default function Skills() {
                       duration: 0.3,
                       delay: i * 0.05 + j * 0.03,
                     }}
-                    className="px-3 py-1.5 text-sm rounded-lg bg-white/[0.06] border border-white/[0.08] text-zinc-300 hover:bg-white/[0.12] hover:border-white/[0.15] hover:text-white transition-all cursor-default"
+                    className="px-3 py-1.5 text-sm rounded-lg bg-white/[0.06] border border-white/[0.08] text-zinc-300 hover:bg-white/[0.12] hover:border-white/[0.15] hover:text-white transition-colors cursor-default"
                   >
                     {skill}
                   </motion.span>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { experiences } from "@/data";
 
 function CompanyLogo({
@@ -24,9 +25,11 @@ function CompanyLogo({
   }
 
   return (
-    <img
+    <Image
       src={logo}
       alt={`${company} logo`}
+      width={48}
+      height={48}
       className="w-12 h-12 rounded-lg object-contain bg-white p-1 shrink-0"
       onError={() => setError(true)}
     />

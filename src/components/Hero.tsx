@@ -1,48 +1,54 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const titles = ["AI/ML Engineer", "Full-Stack Builder", "UC Berkeley '26"];
+const TYPE_SPEED = 80;
+const DELETE_SPEED = 40;
+const HOLD_DELAY = 1800;
 
 export default function Hero() {
   const [titleIndex, setTitleIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [text, setText] = useState("");
 
-  const tick = useCallback(() => {
+  useEffect(() => {
     const currentTitle = titles[titleIndex];
+    const atEnd = charIndex === currentTitle.length;
+    const atStart = charIndex === 0;
+    const delay =
+      atEnd && !isDeleting
+        ? HOLD_DELAY
+        : isDeleting
+          ? DELETE_SPEED
+          : TYPE_SPEED;
 
-    if (!isDeleting) {
-      setText(currentTitle.substring(0, charIndex + 1));
-      setCharIndex((prev) => prev + 1);
-      if (charIndex === currentTitle.length) {
-        setTimeout(() => setIsDeleting(true), 2000);
+    const timer = window.setTimeout(() => {
+      if (!isDeleting && atEnd) {
+        setIsDeleting(true);
         return;
       }
-    } else {
-      setText(currentTitle.substring(0, charIndex - 1));
-      setCharIndex((prev) => prev - 1);
-      if (charIndex === 0) {
+
+      if (isDeleting && atStart) {
         setIsDeleting(false);
         setTitleIndex((prev) => (prev + 1) % titles.length);
         return;
       }
-    }
+
+      setCharIndex((prev) => prev + (isDeleting ? -1 : 1));
+    }, delay);
+
+    return () => clearTimeout(timer);
   }, [charIndex, isDeleting, titleIndex]);
 
-  useEffect(() => {
-    const speed = isDeleting ? 40 : 80;
-    const timer = setTimeout(tick, speed);
-    return () => clearTimeout(timer);
-  }, [tick, isDeleting]);
+  const text = titles[titleIndex].slice(0, charIndex);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6">
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[128px] animate-glow pointer-events-none" />
+    <section className="relative min-h-screen overflow-hidden flex items-center justify-center px-6">
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[128px] animate-glow will-change-opacity pointer-events-none" />
       <div
-        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[128px] animate-glow pointer-events-none"
+        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[128px] animate-glow will-change-opacity pointer-events-none"
         style={{ animationDelay: "2s" }}
       />
 
